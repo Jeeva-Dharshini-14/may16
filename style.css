@@ -172,14 +172,15 @@ body::after {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3.2rem);
   color: var(--text-dark);
-  text-align: center;
   margin-bottom: 0.6rem;
   letter-spacing: -0.01em;
   line-height: 1.2;
   position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
+
+  /* NEW */
+  text-align: left;
+  left: 0;
+  transform: none;
 }
 .section-title::after {
   content: '';
@@ -318,6 +319,7 @@ body::after {
   background:
     linear-gradient(160deg, rgba(255,232,243,0.8) 0%, rgba(255,248,242,0.9) 50%, rgba(240,230,255,0.7) 100%);
   text-align: center;
+  padding-left: 60px;
 }
 
 .countdown-timer {
@@ -326,6 +328,7 @@ body::after {
   justify-content: center;
   gap: clamp(0.5rem, 2vw, 1.5rem);
   flex-wrap: wrap;
+   justify-content: flex-start;
 }
 
 .time-box {
