@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ============================================================
+       META & SEO TAGS
+       These help the page look good when shared on WhatsApp,
+       Instagram, etc. You can change the title and description.
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A special birthday website made with love, just for you." />
+  <meta name="theme-color" content="#ff6b9d" />
+
+  <!-- Open Graph (for link previews on social media) -->
+  <meta property="og:title" content="Happy Birthday My Love 🎂" />
+  <meta property="og:description" content="A little corner of the internet made just for you." />
+  <meta property="og:type" content="website" />
+
+  <title>Happy Birthday My Love 💋🫂</title>
+
+  <!-- ============================================================
+       GOOGLE FONTS
+       Font: 'Dancing Script' for romantic headings
+             'Poppins' for clean body text
+  ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- ============================================================
+       STYLESHEET LINK
+       All styles are written in style.css
+  ============================================================ -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       SECTION 1 — HEART LOADING SCREEN
+       This full-screen overlay shows a beating heart animation
+       while the page loads. It fades out automatically via JS.
+  ============================================================ -->
+  <div id="loader" role="status" aria-label="Loading page">
+    <!-- Animated heart icon (styled in CSS) -->
+    <div class="loader-heart" aria-hidden="true">❤️</div>
+    <!-- Loading message shown under the heart -->
+    <p class="loader-text">Loading something special for you…</p>
+  </div>
+  <!-- END: Loading Screen -->
+
+
+  <!-- ============================================================
+       BACKGROUND MUSIC
+       ✏️ EDIT: Replace the src path below if you rename the file.
+       Current file: assets/music/en-usure-nee-thaney.mp3
+       The music plays/pauses with the button in Section 10.
+  ============================================================ -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="assets/music/kadhal.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+  <!-- END: Background Music -->
+
+
+  <!-- ============================================================
+       MAIN WEBSITE WRAPPER
+       Everything visible after the loader is inside <main>
+  ============================================================ -->
+  <main id="main-content">
+
+
+    <!-- ==========================================================
+         SECTION 2 — HERO SECTION
+         The very first thing she sees after the loader fades away.
+         Shows the main birthday message with animated text.
+    ========================================================== -->
+    <section id="hero" class="section hero-section" aria-label="Birthday greeting">
+
+      <!-- Floating decorative hearts (positioned via CSS) -->
+      <div class="hero-hearts" aria-hidden="true">
+        <span class="heart">💗</span>
+        <span class="heart">💖</span>
+        <span class="heart">💕</span>
+        <span class="heart">💓</span>
+        <span class="heart">💞</span>
+      </div>
+
+      <!-- Main hero text -->
+      <div class="hero-content">
+        <!-- ✏️ EDIT: Change the greeting or add her name below -->
+        <h1 class="hero-title">Happy Birthday Frauddddd💋💋💋</h1>
+        <p class="hero-subtitle">
+          <!-- ✏️ EDIT: Write a short, sweet one-liner here -->
+          Today the universe celebrates the day it made you ✨
+        </p>
+        <!-- Scroll-down arrow cue -->
+        <a href="#countdown" class="hero-scroll-btn" aria-label="Scroll down">
+          <span class="scroll-arrow" aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+    </section>
+    <!-- END: Hero Section -->
+
+
+    <!-- ==========================================================
+         SECTION 3 — COUNTDOWN TIMER
+         Counts down to May 16 (her birthday).
+         ✏️ EDIT: Change the target date in script.js (search for
+         "BIRTHDAY_DATE" to find it quickly).
+    ========================================================== -->
+    <section id="countdown" class="section countdown-section" aria-label="Birthday countdown">
+
+      <h2 class="section-title">Counting Down to Your Day</h2>
+
+      <!-- Timer boxes — numbers are updated by JavaScript -->
+      <div class="countdown-timer" role="timer" aria-live="polite">
+
+        <div class="time-box">
+          <span class="time-value" id="days">00</span>
+          <span class="time-label">Days</span>
+        </div>
+
+        <div class="time-separator" aria-hidden="true">:</div>
+
+        <div class="time-box">
+          <span class="time-value" id="hours">00</span>
+          <span class="time-label">Hours</span>
+        </div>
+
+        <div class="time-separator" aria-hidden="true">:</div>
+
+        <div class="time-box">
+          <span class="time-value" id="minutes">00</span>
+          <span class="time-label">Minutes</span>
+        </div>
+
+        <div class="time-separator" aria-hidden="true">:</div>
+
+        <div class="time-box">
+          <span class="time-value" id="seconds">00</span>
+          <span class="time-label">Seconds</span>
+        </div>
+
+      </div>
+
+      <!-- Message shown when the birthday arrives (hidden by default, shown via JS) -->
+      <p class="birthday-arrived-msg" id="birthday-msg" hidden>
+        🎉 Today is the day! Happy Birthday,Mamaa😘😘! 🎂
+      </p>
+
+    </section>
+    <!-- END: Countdown Timer -->
+
+
+    <!-- ==========================================================
+         SECTION 4 — FLOATING PHOTO POLAROIDS
+         A romantic floating / drifting polaroid-style photo display.
+         ✏️ EDIT: Replace photo1.jpg–photo5.jpg with your favorite
+         couple photos. Add a short caption under each.
+    ========================================================== -->
+    <section id="polaroids" class="section polaroids-section" aria-label="Floating photo polaroids">
+
+      <h2 class="section-title">Moments I Treasure 📸</h2>
+
+      <div class="polaroids-container">
+
+        <!-- Polaroid 1 -->
+        <!-- ✏️ EDIT: Change src to your photo path, update caption -->
+        <div class="polaroid polaroid--float-1">
+          <img src="assets/images/photo1.jpg" alt="Our precious moment 1" loading="lazy" />
+          <p class="polaroid-caption">1st Photo and Meet Together 💕</p>
+        </div>
+
+        <!-- Polaroid 2 -->
+        <div class="polaroid polaroid--float-2">
+          <img src="assets/images/photo2.jpg" alt="Our precious moment 2" loading="lazy" />
+          <p class="polaroid-caption">Always ❤️</p>
+        </div>
+
+        <!-- Polaroid 3 -->
+        <div class="polaroid polaroid--float-3">
+          <img src="assets/images/photo3.jpg" alt="Our precious moment 3" loading="lazy" />
+          <p class="polaroid-caption">Forever 🌙</p>
+        </div>
+
+        <!-- Polaroid 4 -->
+        <div class="polaroid polaroid--float-4">
+          <img src="assets/images/photo4.jpg" alt="Our precious moment 4" loading="lazy" />
+          <p class="polaroid-caption">My world 🌸</p>
+        </div>
+
+        <!-- Polaroid 5 -->
+        <div class="polaroid polaroid--float-5">
+          <img src="assets/images/photo5.jpg" alt="Our precious moment 5" loading="lazy" />
+          <p class="polaroid-caption">My everything 🦋</p>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- END: Floating Polaroids -->
+
+
+    <!-- ==========================================================
+         SECTION 5 — PHOTO GALLERY
+         A full grid of 20 photos — all your beautiful memories.
+         ✏️ EDIT: Replace photo1.jpg through photo20.jpg with your
+         actual photos. Keep the filenames exactly the same OR
+         update the src attributes below to match your filenames.
+         Photos must be placed in: assets/images/
+    ========================================================== -->
+    <section id="gallery" class="section gallery-section" aria-label="Photo gallery">
+
+      <h2 class="section-title">Our Beautiful Memories 🌸</h2>
+      <p class="section-subtitle">Every photo is a page in our story.</p>
+
+      <div class="gallery-grid">
+
+        <!-- ✏️ EDIT: Update alt text to describe each photo -->
+        <figure class="gallery-item">
+          <img src="assets/images/photo1.jpg" alt="Memory 1" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo2.jpg" alt="Memory 2" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo3.jpg" alt="Memory 3" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo4.jpg" alt="Memory 4" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo5.jpg" alt="Memory 5" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo6.jpg" alt="Memory 6" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo7.jpg" alt="Memory 7" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo8.jpg" alt="Memory 8" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo9.jpg" alt="Memory 9" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo10.jpg" alt="Memory 10" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo11.jpg" alt="Memory 11" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo12.jpg" alt="Memory 12" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo13.jpg" alt="Memory 13" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo14.jpg" alt="Memory 14" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo15.jpg" alt="Memory 15" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo16.jpg" alt="Memory 16" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo17.jpg" alt="Memory 17" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo18.jpg" alt="Memory 18" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo19.jpg" alt="Memory 19" loading="lazy" />
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="assets/images/photo20.jpg" alt="Memory 20" loading="lazy" />
+        </figure>
+
+      </div>
+
+    </section>
+    <!-- END: Gallery Section -->
+
+
+    <!-- ==========================================================
+         SECTION 6 — WHY I LOVE YOU
+         A beautiful list of personal reasons.
+         ✏️ EDIT: Replace the placeholder reasons below with your
+         own heartfelt words. You can add or remove <li> items.
+    ========================================================== -->
+    <section id="love-reasons" class="section love-reasons-section" aria-label="Reasons I love you">
+
+      <h2 class="section-title">Why I Love You 💗</h2>
+      <p class="section-subtitle">Just a few of the countless reasons I adore you…</p>
+
+      <ul class="reasons-list">
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">🏡</span>
+          <p class="reason-text">You are not just my boyfriend. You are my safe place, my comfort, my best friend, and
+            the person who makes my heart feel at home.</p>
+        </li>
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">🛡️</span>
+          <p class="reason-text">The way you care for me makes me feel protected, understood, and deeply loved — in
+            every little moment.</p>
+        </li>
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">🌱</span>
+          <p class="reason-text">You always want me to become stronger. You guide me, motivate me, and help me grow into
+            a better version of myself every single day.</p>
+        </li>
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">❤️</span>
+          <p class="reason-text">You are my <em>எண்ணவன்</em> ❤️ — the one who lives in every thought, every silence, and
+            every heartbeat of mine.</p>
+        </li>
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">🌙</span>
+          <p class="reason-text">You give me a kind of love that never lets me feel alone — even when the distance tries
+            its hardest to separate us.</p>
+        </li>
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">💫</span>
+          <p class="reason-text">En usuru nee than. You are my heart, my soul, and the most precious person in my entire
+            life.</p>
+        </li>
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">🌸</span>
+          <p class="reason-text">Even when I get angry or speak without thinking, you stay patient and continue loving
+            me so gently. That patience heals me every time.</p>
+        </li>
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">🤍</span>
+          <p class="reason-text">I know how much you wish to rest on my lap while I softly play with your hair. One day,
+            I promise — I will give you that peaceful moment.</p>
+        </li>
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">✨</span>
+          <p class="reason-text">I love how you notice the tiny details — which dress suits me, which earrings look
+            cute. You see me in ways nobody else ever has.</p>
+        </li>
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">💗</span>
+          <p class="reason-text">Your small acts of care mean more to me than you will ever, ever understand.</p>
+        </li>
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">🌟</span>
+          <p class="reason-text">I want to fulfill every wish and dream you hold — no matter how big or small, I want to
+            be the reason they come true.</p>
+        </li>
+
+        <li class="reason-item">
+          <span class="reason-icon" aria-hidden="true">♾️</span>
+          <p class="reason-text">I love you far more deeply than any words could ever explain. You are my peace, my
+            happiness, my comfort, and my forever person.</p>
+        </li>
+
+      </ul>
+
+    </section>
+    <!-- END: Why I Love You -->
+
+
+    <!-- ==========================================================
+         SECTION 7 — OUR FUTURE GOALS TOGETHER
+         Share the dreams you both want to achieve.
+         ✏️ EDIT: Update each goal card below with your own dreams.
+         You can add more <div class="goal-card"> blocks if needed.
+    ========================================================== -->
+    <section id="future-goals" class="section future-goals-section" aria-label="Our future goals together">
+
+      <h2 class="section-title">Our Future Together ✨</h2>
+      <p class="section-subtitle">Every dream I hold — I want to live it with you.</p>
+
+      <div class="goals-grid">
+
+        <div class="goal-card">
+          <span class="goal-icon" aria-hidden="true">🙏</span>
+          <h3 class="goal-title">Our Families, Our Blessings</h3>
+          <p class="goal-desc">I want us to convince our families happily and marry each other with love, peace, and
+            everyone's blessings surrounding us.</p>
+        </div>
+
+        <div class="goal-card">
+          <span class="goal-icon" aria-hidden="true">🤗</span>
+          <h3 class="goal-title">That First Real Hug</h3>
+          <p class="goal-desc">I want to hold you tight and finally sleep peacefully beside you — exactly the way you
+            always dreamed it would feel.</p>
+        </div>
+
+        <div class="goal-card">
+          <span class="goal-icon" aria-hidden="true">🤝</span>
+          <h3 class="goal-title">Through Every Storm</h3>
+          <p class="goal-desc">I want to stand beside you through every up and every down in life — no matter what comes
+            our way.</p>
+        </div>
+
+        <div class="goal-card">
+          <span class="goal-icon" aria-hidden="true">🌃</span>
+          <h3 class="goal-title">Terrace Nights &amp; Endless Talks</h3>
+          <p class="goal-desc">I want us to sit together under the night sky, talking about our dreams, our future, and
+            everything our hearts hold.</p>
+        </div>
+
+        <div class="goal-card">
+          <span class="goal-icon" aria-hidden="true">👀</span>
+          <h3 class="goal-title">Love Without Hiding</h3>
+          <p class="goal-desc">I want a day where I can look at you openly, in front of everyone — without fear, without
+            hiding, without pretending.</p>
+        </div>
+
+        <div class="goal-card">
+          <span class="goal-icon" aria-hidden="true">✈️</span>
+          <h3 class="goal-title">Travel &amp; Create Memories</h3>
+          <p class="goal-desc">I want us to travel together, explore new places, and build beautiful memories that we'll
+            keep for the rest of our lives.</p>
+        </div>
+
+        <div class="goal-card">
+          <span class="goal-icon" aria-hidden="true">👨‍👩‍👧</span>
+          <h3 class="goal-title">Our Beautiful Family</h3>
+          <p class="goal-desc">I want us to build a home filled with love, laughter, warmth, and little happy moments
+            that become our forever.</p>
+        </div>
+
+        <div class="goal-card">
+          <span class="goal-icon" aria-hidden="true">🌱</span>
+          <h3 class="goal-title">Grow &amp; Achieve Together</h3>
+          <p class="goal-desc">I want us to grow together, achieve together, and build the future we always dreamed
+            about — side by side.</p>
+        </div>
+
+        <div class="goal-card">
+          <span class="goal-icon" aria-hidden="true">💍</span>
+          <h3 class="goal-title">Our Wedding Day</h3>
+          <p class="goal-desc">I want our marriage to happen beautifully and peacefully — with smiles, love, and the
+            blessings of everyone who matters to us.</p>
+        </div>
+
+        <div class="goal-card goal-card--forever">
+          <span class="goal-icon" aria-hidden="true">♾️</span>
+          <h3 class="goal-title">Always and Forever</h3>
+          <p class="goal-desc">No matter what life brings, I always want you beside me. always and forever ♾️</p>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- END: Future Goals -->
+
+
+    <!-- ==========================================================
+         SECTION 8 — RELATIONSHIP TIMELINE
+         A cute visual timeline of your relationship milestones.
+         ✏️ EDIT: Update each event's date, title, and description.
+         Add more <div class="timeline-event"> blocks as needed.
+         The left/right alternating layout is handled by CSS.
+    ========================================================== -->
+    <section id="timeline" class="section timeline-section" aria-label="Our relationship timeline">
+
+      <h2 class="section-title">Our Story So Far 💌</h2>
+      <p class="section-subtitle">Every chapter has been my favorite.</p>
+
+      <div class="timeline">
+
+        <!-- ✏️ EDIT: Change date, title, and the description for each milestone -->
+
+        <!-- Event 1 -->
+        <div class="timeline-event timeline-event--left">
+          <div class="timeline-dot" aria-hidden="true">💗</div>
+          <div class="timeline-content">
+            <span class="timeline-date">Day 1</span>
+            <h3 class="timeline-title">The Beginning</h3>
+            <p class="timeline-desc">The day our story started. I knew you were different from the very first moment.We
+              have been sharing our moments together.Secretly admiring you!!The way you malupufying from me that you
+              acted like you doesn't had any intention on love.</p>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="timeline-event timeline-event--right">
+          <div class="timeline-dot" aria-hidden="true">🌸</div>
+          <div class="timeline-content">
+            <span class="timeline-date">Special Day</span>
+            <h3 class="timeline-title">First Meet</h3>
+            <p class="timeline-desc">The First Meet /Date we did on Trichy ,a sudden plan and very few mins together</p>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="timeline-event timeline-event--left">
+          <div class="timeline-dot" aria-hidden="true">🌙</div>
+          <div class="timeline-content">
+            <span class="timeline-date">A Memory</span>
+            <h3 class="timeline-title">Dec 10 2025</h3>
+            <p class="timeline-desc">We travelled together to cbe at the bus , we had a realyyyyyyyyyy a very good
+              experience at that moment</p>
+          </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="timeline-event timeline-event--right">
+          <div class="timeline-dot" aria-hidden="true">💍</div>
+          <div class="timeline-content">
+            <span class="timeline-date">Our Milestone</span>
+            <h3 class="timeline-title">Jan 6</h3>
+            <p class="timeline-desc">My First Movie and that is with you. Unforgettable experience with you.</p>
+          </div>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="timeline-event timeline-event--left">
+          <div class="timeline-dot" aria-hidden="true">🎂</div>
+          <div class="timeline-content">
+            <span class="timeline-date">May 16</span>
+            <h3 class="timeline-title">Your Birthday</h3>
+            <p class="timeline-desc">The day the world got a little brighter — the day you were born😂😂</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- END: Timeline -->
+
+
+    <!-- ==========================================================
+         SECTION 9 — LOVE LETTER
+         A heartfelt personal letter from you to her.
+         ✏️ EDIT: Replace the placeholder letter below with your
+         own words. This is the most personal section — take
+         your time with it. Keep the <p> tags for formatting.
+    ========================================================== -->
+    <section id="love-letter" class="section love-letter-section" aria-label="Love letter">
+
+      <h2 class="section-title">A Letter From My Heart 💌</h2>
+
+      <article class="letter-card">
+
+        <!-- Letter greeting -->
+        <!-- ✏️ EDIT: Replace "My Love" with her name if you like -->
+        <p class="letter-greeting">My Love,</p>
+
+        <!-- ✏️ EDIT: Write your love letter paragraphs here -->
+        <p class="letter-body">
+          I don't know how to put into words what you mean to me. Every single day,
+          you make this world a warmer and more beautiful place just by existing in it.
+        </p>
+
+        <p class="letter-body">
+          Distance has tried to keep us apart, but nothing — not miles, not time zones,
+          not anything — can change the way I feel about you.
+          You are my first thought in the morning and the last one at night.
+        </p>
+
+        <p class="letter-body">
+          On this birthday, I want you to know: you are deeply, endlessly, and completely loved.
+          I am so lucky that the universe decided to give you to me. Always and Forever ♾️.Love
+          Youuuuuuuuuuuuuuuuuuuuuuuuuuuu Frauddddddddddddd😘
+        </p>
+
+        <p class="letter-body">
+          Happy Birthday, my love. This is just the beginning. 🌙
+        </p>
+
+        <!-- Letter sign-off -->
+        <!-- ✏️ EDIT: Replace with your name or nickname -->
+        <p class="letter-signoff">Forever yours, ❤️</p>
+
+      </article>
+
+    </section>
+    <!-- END: Love Letter -->
+
+
+    <!-- ==========================================================
+         SECTION 10 — MUSIC PLAYER BUTTON
+         A floating play/pause button for the background music.
+         The actual play/pause logic is handled in script.js.
+         The button is fixed on screen (positioned via CSS).
+    ========================================================== -->
+    <div id="music-player" class="music-player" aria-label="Music controls">
+      <button id="music-btn" class="music-btn" aria-label="Play background music" title="Play / Pause Music">
+        <!-- Icons swap between ▶ and ⏸ via JavaScript -->
+        <span id="music-icon" aria-hidden="true">🎵</span>
+      </button>
+    </div>
+    <!-- END: Music Player -->
+
+
+    <!-- ==========================================================
+         SECTION 11 — SURPRISE BUTTON WITH HIDDEN MESSAGE
+         A button that reveals a hidden love message when clicked.
+         ✏️ EDIT: Change the hidden message text in the
+         <div id="surprise-message"> below.
+         The show/hide logic is in script.js.
+    ========================================================== -->
+    <section id="surprise" class="section surprise-section" aria-label="Surprise message">
+
+      <h2 class="section-title">I Have a Surprise For You 🎁</h2>
+
+      <div class="surprise-wrapper">
+
+        <button id="surprise-btn" class="surprise-btn" aria-expanded="false">
+          <!-- Button text before clicking -->
+          <span id="surprise-btn-text">Click to reveal your surprise 💝</span>
+        </button>
+
+        <!-- Hidden message — shown after button click -->
+        <!-- ✏️ EDIT: Write your surprise message here -->
+        <div id="surprise-message" class="surprise-message" hidden aria-live="polite">
+          <p class="surprise-text">
+            🎊 Surprise! I love you more than all the stars in the sky. 🌟
+          </p>
+          <p class="surprise-text">
+            No matter where life takes us, I will always choose you. Every single day.
+            So on your birthday i have described that the sentence i often used with you "Enaku una rmbo pidikum", so
+            athoda meaning ah detailed ah explain pani iruken!!
+            So whatever the struggles ,happiness , milestones, we'll face and achieve together😘😘😘.
+            Love You My Man💋💋
+          </p>
+          <!-- ✏️ EDIT: You can add an image here too! -->
+          <!-- <img src="assets/images/surprise-photo.jpg" alt="A special photo" /> -->
+        </div>
+
+      </div>
+
+    </section>
+    <!-- END: Surprise Section -->
+
+
+    <!-- ==========================================================
+         SECTION 12 — FINAL CLOSING SECTION (FOOTER QUOTE)
+         The last thing she reads — ends on a powerful note.
+         ✏️ EDIT: You can update the quote or the sender name below.
+    ========================================================== -->
+    <footer id="final-section" class="section final-section" role="contentinfo">
+
+      <div class="final-content">
+
+        <!-- Main closing quote — do not change unless you want a different message -->
+        <blockquote class="final-quote">
+          "Distance is temporary, but my love for you is permanent."
+        </blockquote>
+
+        <!-- ✏️ EDIT: Add your name or a nickname here -->
+        <p class="final-from">— Made with every bit of love I have, for you 💗</p>
+
+        <!-- Decorative floating hearts -->
+        <div class="final-hearts" aria-hidden="true">
+          <span>💗</span>
+          <span>💖</span>
+          <span>💕</span>
+          <span>💓</span>
+          <span>💞</span>
+        </div>
+
+      </div>
+
+    </footer>
+    <!-- END: Final Closing Section -->
+
+
+  </main>
+  <!-- END: Main Content -->
+
+
+  <!-- ============================================================
+       JAVASCRIPT LINK
+       script.js handles: loader fade, countdown timer,
+       music play/pause, surprise button, and scroll animations.
+       Keep this at the bottom of <body> for best performance.
+  ============================================================ -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
